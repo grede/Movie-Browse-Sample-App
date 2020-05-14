@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Presentation</string>
+    <string name="release_date">Release date</string>
+    <string name="movie_description">Description: %s</string>
+    <string name="movie_rating">Rating: %s</string>
+    <string name="movie_vote_count">Votes: %d</string>
+</resources>

@@ -1,0 +1,31 @@
+ext {
+    config = new Expando()
+
+    config.version = new Expando()
+
+    config.version.app_compile_sdk = 28
+    config.version.app_min_sdk = 19
+    config.version.app_target_sdk = 28
+
+    config.version.support_library = "28.0.0-rc02"
+    config.version.retrofit = "2.4.0"
+    config.version.kotlin = "1.2.50"
+    config.version.rxjava = "2.0.0"
+    config.version.rxjava_android = "2.0.2"
+    config.version.gson = "2.8.5"
+    config.version.kodein = "5.2.0"
+    config.version.crashlytics = "2.9.3"
+    config.version.arch_core = "1.1.0"
+    config.version.picasso = "2.71828"
+    config.version.support_constraint_layout = "1.1.2"
+    config.version.okhttp = "3.10.0"
+    config.version.material = "1.0.0"
+
+    //Test
+    //tests
+    config.version.junit = "4.12"
+    config.version.mockito = "2.28.2"
+    config.version.arch_test_core = "1.1.1"
+    config.version.mockito_kotlin = "2.1.0"
+    config.version.robolectric = "4.3.1"
+}

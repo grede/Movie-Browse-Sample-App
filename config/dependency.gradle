@@ -1,0 +1,84 @@
+apply from: '../config/config.gradle'
+
+ext {
+    config.dependency = new Expando()
+
+    config.dependency.kotlin = [
+            "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${config.version.kotlin}"
+    ]
+
+    config.dependency.retrofit = [
+            "com.squareup.retrofit2:retrofit:${config.version.retrofit}",
+            "com.squareup.retrofit2:converter-gson:${config.version.retrofit}",
+            "com.squareup.retrofit2:adapter-rxjava2:${config.version.retrofit}"
+    ]
+
+    config.dependency.gson = [
+            "com.google.code.gson:gson:${config.version.gson}"
+    ]
+
+    config.dependency.picasso = [
+            "com.squareup.picasso:picasso:${config.version.picasso}"
+    ]
+
+    config.dependency.rxjava = [
+            "io.reactivex.rxjava2:rxjava:${config.version.rxjava}"
+    ]
+
+    config.dependency.rxjava_android = [
+            "io.reactivex.rxjava2:rxandroid:${config.version.rxjava_android}"
+    ]
+
+    config.dependency.support_appcompat = [
+            "com.android.support:appcompat-v7:${config.version.support_library}"
+    ]
+
+    config.dependency.support_recyclerview = [
+            "com.android.support:recyclerview-v7:${config.version.support_library}"
+    ]
+
+    config.dependency.support_constraint_layout = [
+            "com.android.support.constraint:constraint-layout:${config.version.support_constraint_layout}"
+    ]
+
+    config.dependency.kodein = [
+            "org.kodein.di:kodein-di-generic-jvm:${config.version.kodein}",
+            "org.kodein.di:kodein-di-framework-android-core:${config.version.kodein}"
+    ]
+
+    config.dependency.support_annotations = [
+            "com.android.support:support-annotations:${config.version.support_library}"
+    ]
+
+    config.dependency.arch_core = [
+            "android.arch.core:runtime:${config.version.arch_core}"
+    ]
+
+    config.dependency.arch_viewmodel = [
+            "android.arch.lifecycle:viewmodel:${config.version.arch_core}"
+    ]
+
+    config.dependency.arch_livedata = [
+            "android.arch.lifecycle:livedata:${config.version.arch_core}"
+    ]
+
+    config.dependency.arch_extensions = [
+            "android.arch.lifecycle:extensions:${config.version.arch_core}"
+    ]
+
+    config.dependency.mockito = [
+            "com.nhaarman:mockito-kotlin:${config.version.mockito_kotlin}"
+    ]
+
+    config.dependency.ohkttp_logging = [
+            "com.squareup.okhttp3:logging-interceptor:${config.version.okhttp}"
+    ]
+
+    config.dependency.unit_test = [
+            "junit:junit:${config.version.junit}",
+            "org.mockito:mockito-core:${config.version.mockito}",
+            "android.arch.core:core-testing:${config.version.arch_test_core}",
+            "com.nhaarman.mockitokotlin2:mockito-kotlin:${config.version.mockito_kotlin}",
+            "org.robolectric:robolectric:${config.version.robolectric}"
+    ]
+}

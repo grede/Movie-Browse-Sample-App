@@ -1,0 +1,33 @@
+apply from: '../config/dependency.gradle'
+apply plugin: 'com.android.application'
+apply from: '../config/kotlin_plugin.gradle'
+
+android {
+    compileSdkVersion config.version.app_compile_sdk
+
+    defaultConfig {
+        applicationId "com.moviebrowseapp"
+        minSdkVersion config.version.app_min_sdk
+        targetSdkVersion config.version.app_target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "MOVIE_DB_API_URL", "\"https://api.themoviedb.org/\""
+        buildConfigField "String", "MOVIE_DB_API_KEY", "\"<insert_api_key_here>\""
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    implementation config.dependency.kotlin
+    implementation config.dependency.kodein
+    implementation config.dependency.ohkttp_logging
+
+    implementation project(':Presentation')
+    implementation project(':Domain')
+    implementation project(':Data')
+    implementation project(':Tool')
+}
